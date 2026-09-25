@@ -36,6 +36,7 @@ displayGames(games);
 // Open Modal
 function openModal() {
     addGameModal.style.display = 'block';
+    document.body.classList.add('modal-open');
     gameForm.reset();
     gameRatingInput.value = '';
     ratingDisplay.textContent = 'No rating selected';
@@ -45,6 +46,7 @@ function openModal() {
 // Close Modal
 function closeModal() {
     addGameModal.style.display = 'none';
+    document.body.classList.remove('modal-open');
 }
 
 // Close modal when clicking outside
