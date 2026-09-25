@@ -289,6 +289,40 @@ header p {
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
+/* Star Rating Input Styles */
+.star-rating-input {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.star-rating-input .star {
+    font-size: 2.5em;
+    cursor: pointer;
+    color: #ddd;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.star-rating-input .star:hover,
+.star-rating-input .star.active {
+    color: #ffc107;
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+    transform: scale(1.1);
+}
+
+.star-rating-input .star.hovered {
+    color: #ffb300;
+    transform: scale(1.15);
+}
+
+.rating-display {
+    font-size: 0.9em;
+    color: #667eea;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
 .submit-btn {
     background: #667eea;
     color: white;
@@ -335,6 +369,10 @@ header p {
         width: 95%;
         margin: 20% auto;
     }
+
+    .star-rating-input .star {
+        font-size: 2em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -352,5 +390,9 @@ header p {
 
     .game-card {
         margin: 0;
+    }
+
+    .star-rating-input .star {
+        font-size: 1.8em;
     }
 }
